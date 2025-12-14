@@ -1,17 +1,17 @@
-public class PalindromeNumber{
+class PalindromeNumber{
 	public static void main(String [] args){
 		int cfp = -12321;
 		cfp = (cfp<0) ? cfp=cfp*(-1) : cfp;
 		System.out.println(isPalindrome(cfp));
 
 	}
-	public static boolean isPalindrome(int palindrome){
+	static boolean isPalindrome(int palindrome){
 		int reversedPalindrome = reverse(palindrome);
 		System.out.println(reversedPalindrome);
 		boolean result = (palindrome == reversedPalindrome) ? true : false;
 		return result;
 	}
-	public static int reverse(int palindrome){
+	static int reverse(int palindrome){
 		int reversedPalindrome = 0;
 		int result = 0;
 		while (palindrome > 0) {
