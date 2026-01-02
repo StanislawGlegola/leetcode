@@ -7,14 +7,14 @@ class ClosestNumberToZero {
 	}
 
 	public static int closestNumberToZero(int[] nums) {
-		int result = nums[0];
+		int closest = nums[0];
 		for (int num: nums) {
-			if (Math.abs(num) < Math.abs(result)) {
-				result = num;
-			} else if (Math.abs(num) == Math.abs(result)) {
-				result = (num > result) ? num : result;
+			if (Math.abs(num) < Math.abs(closest)) {
+				closest = num;
+			} else if (Math.abs(num) == Math.abs(closest)) {
+				closest = (num > closest) ? num : closest;
 			}
 		}
-		return result;
+		return closest;
 	}
 }
